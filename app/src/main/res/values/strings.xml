@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Travel Diary</string>
+    <string name="activity_main_title">My Travel Diary </string>
 </resources>
