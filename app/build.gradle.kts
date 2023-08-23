@@ -71,7 +71,7 @@ dependencies {
     kapt ("com.github.bumptech.glide:compiler:4.14.2")
 
     implementation("com.google.firebase:firebase-analytics-ktx:21.3.0")
-    implementation("com.google.firebase:firebase-auth-ktx:22.1.1")
+    implementation("com.google.firebase:firebase-auth-ktx:21.1.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("androidx.room:room-testing:2.4.3")
