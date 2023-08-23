@@ -1,5 +1,6 @@
 package com.adhiambooyier.mytraveldiary.common.di.modules
 
+import com.adhiambooyier.mytraveldiary.presentation.LoginActivity
 import com.adhiambooyier.mytraveldiary.presentation.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -8,4 +9,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityModule {
     @ContributesAndroidInjector
     internal abstract fun provideMainActivity(): MainActivity
+
+    @ContributesAndroidInjector
+    internal abstract fun provideLoginActivity(): LoginActivity
 }

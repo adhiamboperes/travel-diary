@@ -1,4 +1,4 @@
-package com.adhiambo.movieguide.common.di
+package com.adhiambooyier.mytraveldiary.common.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

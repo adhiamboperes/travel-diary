@@ -3,8 +3,9 @@ package com.adhiambooyier.mytraveldiary.common.di.modules
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.adhiambooyier.mytraveldiary.common.di.ViewModelFactory
-import com.adhiambo.movieguide.common.di.ViewModelKey
+import com.adhiambooyier.mytraveldiary.common.di.ViewModelKey
 import com.adhiambooyier.mytraveldiary.presentation.EntriesViewModel
+import com.adhiambooyier.mytraveldiary.presentation.LoginViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -17,5 +18,10 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(EntriesViewModel::class)
-   internal abstract fun provideMoviesViewModel(moviesViewModel: EntriesViewModel): ViewModel
+   internal abstract fun provideEntriesViewModel(entriesViewModel: EntriesViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(LoginViewModel::class)
+    internal abstract fun provideLoginViewModel(loginViewModel: LoginViewModel): ViewModel
 }

@@ -17,6 +17,12 @@
             android:name=".presentation.MainActivity"
             android:exported="true"
             android:label="@string/activity_main_title"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".presentation.LoginActivity"
+            android:exported="true"
+            android:label=""
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
