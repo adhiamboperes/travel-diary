@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    //id("com.google.devtools.ksp")
     id("kotlin-kapt")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -42,6 +42,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -62,8 +66,12 @@ dependencies {
     implementation("com.google.dagger:dagger-android:2.43.2")
     kapt("com.google.dagger:dagger-compiler:2.43.2")
     kapt("com.google.dagger:dagger-android-processor:2.43.2")
+
     implementation ("com.github.bumptech.glide:glide:4.14.2")
     kapt ("com.github.bumptech.glide:compiler:4.14.2")
+
+    implementation("com.google.firebase:firebase-analytics-ktx:21.3.0")
+    implementation("com.google.firebase:firebase-auth-ktx:22.1.1")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("androidx.room:room-testing:2.4.3")
