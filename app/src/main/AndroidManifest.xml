@@ -28,6 +28,7 @@
             android:name=".presentation.LoginActivity"
             android:exported="true"
             android:label=""
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
