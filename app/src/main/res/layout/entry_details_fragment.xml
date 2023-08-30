@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/entry_details_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/baseline_arrow_back_24" >
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/entry_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@id/entry_details_toolbar">
+
+            <EditText
+                android:id="@+id/entry_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/entry_details_background"
+                android:fontFamily="sans-serif"
+                android:hint="Title"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Some Title Text" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/entry_details_date_created"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/entry_details_title"
+                tools:text="August 28 12:42" />
+
+            <EditText
+                android:id="@+id/entry_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/entry_details_background"
+                android:fontFamily="sans-serif"
+                android:hint="Start typing"
+                android:paddingTop="4dp"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/entry_details_date_created"
+                tools:text="If you could provide more context, such as the programming language, framework, or context in which you encountered this method, I would be happy to help you understand its purpose or provide guidance" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/entry_details_add_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Add a new entry"
+            android:src="@drawable/ic_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/entry_details_image_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/entry_details_container" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

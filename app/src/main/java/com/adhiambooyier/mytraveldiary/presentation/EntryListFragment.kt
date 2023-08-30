@@ -18,10 +18,14 @@ class EntryListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = EntryListFragmentBinding.inflate(inflater, container, /* attachToRoot= */ false)
+        binding.entryListNewEntryButton.setOnClickListener {
+            startActivity(EntryDetailsActivity.getIntent(requireContext()))
+        }
+
         return binding.root
     }
 
-    companion object{
+    companion object {
         fun newInstance(): EntryListFragment = EntryListFragment()
     }
 }
